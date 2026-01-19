@@ -1,6 +1,6 @@
 # Mood Adaptive Journal
 
-Live Demo  : 
+Live Demo  :  ( https://varsha596.github.io/mood-adaptive-journal/ )
 
 Description  :
  A frontend web application to track daily moods and the reasons behind them. Users can select their mood (happy, sad, angry, calm), write a short note, and visualize mood trends over time.

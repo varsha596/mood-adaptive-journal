@@ -1,0 +1,94 @@
+body {
+    font-family: Arial, sans-serif;
+    background: #f4f4f4;
+    display: flex;
+    justify-content: center;
+    padding: 50px 10px;
+}
+
+.app {
+    background: #fff;
+    padding: 25px;
+    width: 500px;
+    border-radius: 12px;
+    box-shadow: 0 5px 25px rgba(0,0,0,0.1);
+}
+
+h1 { text-align: center; margin-bottom: 20px; }
+
+.entry-form, .controls { display: flex; flex-direction: column; gap: 10px; margin-bottom: 15px; }
+
+.entry-form select, .entry-form textarea, .entry-form button,
+.controls select, .controls input {
+    padding: 10px;
+    border-radius: 8px;
+    border: 1px solid #ccc;
+    font-size: 14px;
+}
+
+textarea { height: 70px; resize: none; }
+
+button {
+    background: #4f46e5;
+    color: #fff;
+    border: none;
+    cursor: pointer;
+    font-weight: bold;
+    transition: all 0.2s;
+}
+
+button:hover { background: #3730a3; transform: translateY(-1px); }
+
+.controls { flex-direction: row; gap: 10px; }
+.controls select, .controls input { flex: 1; }
+
+.entry {
+    margin-top: 10px;
+    padding: 12px;
+    border-radius: 10px;
+    color: #fff;
+    position: relative;
+}
+
+.entry.happy { background: #fbbf24; color: #111; }
+.entry.sad { background: #60a5fa; }
+.entry.angry { background: #f87171; }
+.entry.calm { background: #34d399; }
+
+.edit-btn, .delete-btn {
+    position: absolute;
+    top: 8px;
+    padding: 4px 8px;
+    font-size: 12px;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+}
+
+.edit-btn { right: 60px; background: #3b82f6; color: #fff; }
+.delete-btn { right: 10px; background: #ef4444; color: #fff; }
+
+#summary { margin-top: 20px; background: #f3f3f3; padding: 12px; border-radius: 10px; }
+#mood-counts { display: flex; justify-content: space-between; margin-bottom: 8px; }
+
+#trend-bar {
+    display: flex;
+    flex-wrap: nowrap;
+    gap: 4px;
+    padding: 8px 0;
+}
+
+.trend-dot {
+    width: 15px;
+    height: 15px;
+    border-radius: 50%;
+    display: inline-block;
+    cursor: pointer;
+}
+
+.trend-dot.happy { background: #fbbf24; }
+.trend-dot.sad { background: #60a5fa; }
+.trend-dot.angry { background: #f87171; }
+.trend-dot.calm { background: #34d399; }
+
+@media (max-width: 520px) { .app { width: 95%; padding: 20px; } .controls { flex-direction: column; } }

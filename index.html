@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>Mood-Adaptive Journal</title>
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<div class="app">
+    <h1>📝 Mood-Adaptive Journal</h1>
+
+    <!-- Form to Add Entry -->
+    <div class="entry-form">
+        <select id="mood">
+            <option value="">Select Mood</option>
+            <option value="happy">😊 Happy</option>
+            <option value="sad">😔 Sad</option>
+            <option value="angry">😡 Angry</option>
+            <option value="calm">😌 Calm</option>
+        </select>
+        <textarea id="entry" placeholder="Write reason for your mood..."></textarea>
+        <button onclick="saveEntry()">Add Entry</button>
+    </div>
+
+    <!-- Filter/Search -->
+    <div class="controls">
+        <select id="filter" onchange="renderEntries()">
+            <option value="">Filter by Mood</option>
+            <option value="happy">😊 Happy</option>
+            <option value="sad">😔 Sad</option>
+            <option value="angry">😡 Angry</option>
+            <option value="calm">😌 Calm</option>
+        </select>
+        <input type="text" id="search" placeholder="Search reason..." oninput="renderEntries()">
+    </div>
+
+    <!-- Entries will show here -->
+    <div id="entries"></div>
+
+    <!-- Mood Summary -->
+    <div id="summary">
+        <h3>Mood Summary</h3>
+        <div id="mood-counts">
+            <span>😊 Happy: <span id="happyCount">0</span></span>
+            <span>😔 Sad: <span id="sadCount">0</span></span>
+            <span>😡 Angry: <span id="angryCount">0</span></span>
+            <span>😌 Calm: <span id="calmCount">0</span></span>
+        </div>
+        <div id="mood-trends">
+            <h4>Mood Timeline:</h4>
+            <div id="trend-bar" title="Your mood timeline"></div>
+        </div>
+    </div>
+</div>
+
+<script src="script.js"></script>
+</body>
+</html>
